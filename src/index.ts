@@ -14,7 +14,7 @@ import studentRouter from "./routes/studentRoutes.js";
 import courseRouter from "./routes/courseRoutes.js";
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("API services for Student Data");
+  res.send({"success":true,"message":"lab 15 API service successfully"});
 });
 
 app.get("/me", (req: Request, res: Response) => {
