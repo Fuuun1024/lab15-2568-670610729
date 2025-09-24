@@ -13,6 +13,10 @@ app.use(morgan('dev'));
 import studentRouter from "./routes/studentRoutes.js";
 import courseRouter from "./routes/courseRoutes.js";
 
+app.get("/", (req: Request, res: Response) => {
+  res.send("API services for Student Data");
+});
+
 app.get("/me", (req: Request, res: Response) => {
 
   return res.status(200).json({
