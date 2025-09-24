@@ -1,7 +1,11 @@
 import { z } from "zod";
 
-const zCourseId = z.number().int().refine(val => val >= 100000 && val <= 999999, {
+export const zCourseId = z.number().int().refine(val => val >= 100000 && val <= 999999, {
   message: "Number must be exactly 6 digits"});
+
+export const zCourseIdV2 = z.number().int().refine(val => val >= 100000 && val <= 999999, {
+  message: "Invalid input: expected number, received NaN"});
+
 const zCourseTitle = z.string()
 const zInstructors = z.array(z.string());
 
